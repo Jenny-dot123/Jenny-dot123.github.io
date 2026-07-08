@@ -3,26 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>深圳志康电子科技有限公司</title>
-  <meta name="description" content="深圳志康电子科技有限公司，专业储存芯片供应商，主营 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片，应用于消费电子、数据中心、车载电子等场景。">
-  <meta name="keywords" content="深圳志康电子科技有限公司,存储芯片,SDRAM,DDR,DDR2,DDR3,SPI,芯片供应商">
+  <title>深圳志康电子科技有限公司 | 专业储存芯片供应商</title>
+  <meta name="description" content="深圳志康电子科技有限公司成立于2010年，深耕芯片供应行业25年以上，在香港和深圳均设有办公室，主营 SDRAM、DDR、DDR2、DDR3、SPI 等各种存储芯片，服务消费电子、数据中心、车载电子等应用方向。">
+  <meta name="keywords" content="深圳志康电子科技有限公司,存储芯片,储存芯片,SDRAM,DDR,DDR2,DDR3,SPI,芯片供应商">
   <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0a1830">
   <meta property="og:title" content="深圳志康电子科技有限公司">
   <meta property="og:description" content="专业储存芯片供应商，主营 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jenny-dot123.github.io/">
+  <link rel="canonical" href="https://jenny-dot123.github.io/">
   <style>
     :root {
-      --primary: #0c1730;
-      --primary-2: #17345f;
+      --navy: #091a33;
+      --navy-2: #10284d;
+      --navy-3: #153763;
+      --gold: #c79a43;
+      --gold-soft: #f0e3c4;
       --white: #ffffff;
-      --text: #111827;
-      --muted: #667085;
-      --line: rgba(255, 255, 255, 0.18);
-      --line-soft: rgba(17, 24, 39, 0.08);
-      --bg: #ffffff;
-      --bg-soft: #f6f8fc;
-      --red: #b92d2d;
-      --shadow: 0 22px 56px rgba(8, 19, 44, 0.12);
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --panel-soft: #f7f9fc;
+      --text: #152235;
+      --muted: #607089;
+      --line: rgba(14, 32, 62, 0.1);
+      --line-light: rgba(255, 255, 255, 0.18);
+      --shadow: 0 24px 60px rgba(8, 28, 58, 0.12);
+      --shadow-soft: 0 12px 28px rgba(8, 28, 58, 0.08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
       --max: 1240px;
     }
 
@@ -30,11 +40,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(199, 154, 67, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #f3f6fb 100%);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
     a {
@@ -52,12 +68,36 @@
       margin: 0 auto;
     }
 
+    .topbar {
+      position: relative;
+      z-index: 3;
+      border-bottom: 1px solid var(--line-light);
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    .topbar-list,
+    .topbar-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
     .hero {
       position: relative;
-      min-height: 100vh;
-      background: #060d18;
-      color: var(--white);
       overflow: hidden;
+      min-height: 100vh;
+      background: #071221;
+      color: var(--white);
     }
 
     .hero-slides {
@@ -68,11 +108,11 @@
     .hero-slide {
       position: absolute;
       inset: 0;
+      opacity: 0;
+      transform: scale(1.04);
       background-size: cover;
       background-position: center;
-      opacity: 0;
-      animation: heroFade 15s infinite;
-      transform: scale(1.06);
+      animation: heroFade 18s infinite;
     }
 
     .hero-slide::after {
@@ -80,8 +120,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(3, 10, 20, 0.18), rgba(3, 10, 20, 0.68)),
-        linear-gradient(90deg, rgba(3, 8, 18, 0.74) 0%, rgba(3, 8, 18, 0.3) 46%, rgba(3, 8, 18, 0.62) 100%);
+        linear-gradient(180deg, rgba(4, 10, 20, 0.2), rgba(4, 10, 20, 0.78)),
+        linear-gradient(90deg, rgba(4, 10, 20, 0.9) 0%, rgba(4, 10, 20, 0.48) 45%, rgba(4, 10, 20, 0.88) 100%);
     }
 
     .hero-slide:nth-child(1) {
@@ -89,11 +129,11 @@
     }
 
     .hero-slide:nth-child(2) {
-      animation-delay: 5s;
+      animation-delay: 6s;
     }
 
     .hero-slide:nth-child(3) {
-      animation-delay: 10s;
+      animation-delay: 12s;
     }
 
     @keyframes heroFade {
@@ -105,129 +145,350 @@
       }
     }
 
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 130px;
+      right: -120px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(199, 154, 67, 0.22), transparent 68%);
+    }
+
+    .hero::after {
+      left: -160px;
+      bottom: -120px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(32, 84, 160, 0.3), transparent 66%);
+    }
+
     .hero-inner {
       position: relative;
       z-index: 2;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: calc(100vh - 48px);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 28px 0;
+      gap: 24px;
+      padding: 24px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
     }
 
     .brand-mark {
-      width: 36px;
-      height: 36px;
-      border: 3px solid var(--white);
-      border-radius: 8px 18px 8px 18px;
-      transform: rotate(45deg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold) 0%, #f4c66f 100%);
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(199, 154, 67, 0.25);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-copy span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 46px;
-      font-size: 17px;
+      justify-content: flex-end;
+      gap: 28px;
+      font-size: 16px;
     }
 
-    .nav-links a {
+    .nav-links a:not(.nav-phone) {
       position: relative;
+      color: rgba(255, 255, 255, 0.86);
     }
 
-    .nav-links a::after {
+    .nav-links a:not(.nav-phone)::after {
       content: "";
       position: absolute;
       left: 0;
       bottom: -8px;
       width: 100%;
       height: 2px;
-      background: rgba(255, 255, 255, 0.88);
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.25s ease;
+      background: linear-gradient(90deg, var(--gold), rgba(255, 255, 255, 0.85));
+      transition: transform 0.24s ease;
     }
 
-    .nav-links a:hover::after {
+    .nav-links a:not(.nav-phone):hover::after {
       transform: scaleX(1);
     }
 
-    .hero-copy {
-      display: flex;
+    .nav-phone {
+      display: inline-flex;
       align-items: center;
-      min-height: calc(100vh - 210px);
-      padding: 80px 0 40px;
+      justify-content: center;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      font-weight: 700;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      transition: transform 0.24s ease, background 0.24s ease;
     }
 
-    .hero-copy-inner {
-      max-width: 620px;
+    .nav-phone:hover,
+    .hero-actions .secondary:hover,
+    .floating-call:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 44px;
+      align-items: center;
+      padding: 56px 0 38px;
+      flex: 1;
+    }
+
+    .hero-copy {
+      max-width: 680px;
     }
 
     .hero-kicker {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.82);
       font-size: 13px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(199, 154, 67, 0.14);
     }
 
     .hero-copy h1 {
-      margin: 0;
-      font-size: clamp(44px, 6vw, 72px);
-      line-height: 1.15;
-      font-weight: 800;
+      margin: 22px 0 0;
+      font-size: clamp(42px, 6vw, 74px);
+      line-height: 1.08;
+      letter-spacing: 0.02em;
     }
 
     .hero-copy p {
-      margin: 22px 0 0;
-      max-width: 540px;
-      color: rgba(255, 255, 255, 0.8);
+      margin: 24px 0 0;
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.78);
       font-size: 18px;
       line-height: 1.9;
     }
 
-    .hero-points {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 168px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+    }
+
+    .hero-actions .primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #efc570 100%);
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(199, 154, 67, 0.26);
+    }
+
+    .hero-actions .primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(199, 154, 67, 0.32);
+    }
+
+    .hero-actions .secondary {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+    }
+
+    .hero-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .hero-stat {
+      padding: 20px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: var(--gold-soft);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-stat span {
+      display: block;
+      margin-top: 12px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .panel-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-soft);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .panel-label::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: rgba(240, 227, 196, 0.7);
+    }
+
+    .panel-title {
+      margin: 18px 0 0;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+
+    .panel-text {
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .panel-item {
+      padding: 18px 16px;
+      border-radius: 18px;
+      background: rgba(9, 26, 51, 0.34);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .panel-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 15px;
+    }
+
+    .panel-item span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+
+    .hero-foot {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
       margin-top: auto;
-      padding: 24px 0 36px;
-      border-top: 1px solid var(--line);
+      padding: 0 0 42px;
     }
 
-    .hero-point {
-      padding-right: 24px;
-      border-right: 1px solid var(--line);
+    .hero-foot-card {
+      padding: 22px 20px;
+      border-top: 1px solid var(--line-light);
     }
 
-    .hero-point:last-child {
-      border-right: none;
-    }
-
-    .hero-point strong {
+    .hero-foot-card strong {
       display: block;
       margin-bottom: 10px;
+      color: var(--white);
       font-size: 16px;
     }
 
-    .hero-point span {
+    .hero-foot-card span {
       display: block;
       color: rgba(255, 255, 255, 0.72);
       line-height: 1.8;
@@ -235,210 +496,335 @@
     }
 
     .section {
-      padding: 92px 0;
+      padding: 96px 0;
     }
 
-    .section:nth-child(even) {
-      background: var(--bg-soft);
+    .section-alt {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(242, 246, 251, 0.92));
     }
 
     .section-head {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      gap: 24px;
+      gap: 26px;
       margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .section-head h2 {
       margin: 0;
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.2;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.18;
     }
 
-    .section-head .desc {
-      max-width: 620px;
+    .section-desc {
+      max-width: 640px;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.85;
+      line-height: 1.9;
     }
 
     .more {
-      color: var(--red);
-      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy-3);
+      font-size: 15px;
+      font-weight: 700;
       white-space: nowrap;
     }
 
-    .product-grid {
+    .more::after {
+      content: "→";
+      font-size: 16px;
+    }
+
+    .value-grid,
+    .product-grid,
+    .news-grid,
+    .support-grid,
+    .footer-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
+    .value-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .value-card,
     .product-card,
     .app-card,
+    .support-card,
+    .about-main,
+    .about-side,
     .news-card,
-    .about-card,
-    .contact-card {
-      background: var(--white);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
+    .contact-panel,
+    .footer-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .value-card {
+      padding: 28px 24px;
+    }
+
+    .value-card strong {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 15px;
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .product-card {
       position: relative;
-      min-height: 300px;
+      min-height: 340px;
       padding: 26px;
+      overflow: hidden;
       color: var(--white);
       background:
-        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        linear-gradient(180deg, rgba(4, 12, 24, 0.12), rgba(4, 12, 24, 0.88)),
         url("https://images.pexels.com/photos/6636474/pexels-photo-6636474.jpeg?auto=compress&w=1200") center/cover no-repeat;
     }
 
     .product-card:nth-child(2) {
       background:
-        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        linear-gradient(180deg, rgba(4, 12, 24, 0.12), rgba(4, 12, 24, 0.88)),
         url("https://images.pexels.com/photos/38361204/pexels-photo-38361204/free-photo-of-close-up-of-sk-hynix-dram-chips-on-circuit-board.jpeg?auto=compress&w=1200") center/cover no-repeat;
     }
 
     .product-card:nth-child(3) {
       background:
-        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        linear-gradient(180deg, rgba(4, 12, 24, 0.12), rgba(4, 12, 24, 0.88)),
         url("https://images.pexels.com/photos/38361776/pexels-photo-38361776/free-photo-of-close-up-of-computer-ram-and-circuit-board-components.jpeg?auto=compress&w=1200") center/cover no-repeat;
     }
 
     .product-card:nth-child(4) {
       background:
-        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        linear-gradient(180deg, rgba(4, 12, 24, 0.12), rgba(4, 12, 24, 0.88)),
         url("https://images.pexels.com/photos/37368175/pexels-photo-37368175/free-photo-of-close-up-of-computer-motherboard-components.jpeg?auto=compress&w=1200") center/cover no-repeat;
+    }
+
+    .product-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 18px 18px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.18);
     }
 
     .product-tag {
       display: inline-flex;
-      padding: 6px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 7px 12px;
       border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: rgba(255, 255, 255, 0.08);
     }
 
     .product-card h3 {
-      margin: 136px 0 10px;
-      font-size: 26px;
+      margin: 152px 0 12px;
+      font-size: 28px;
+      line-height: 1.2;
     }
 
     .product-card p {
       margin: 0;
       color: rgba(255, 255, 255, 0.8);
-      line-height: 1.8;
+      line-height: 1.85;
       font-size: 15px;
     }
 
     .application-wrap {
       display: grid;
-      grid-template-columns: 1fr;
       gap: 20px;
     }
 
     .app-card {
       display: grid;
       grid-template-columns: 360px 1fr;
-      min-height: 240px;
-      color: var(--text);
+      overflow: hidden;
     }
 
     .app-media {
-      min-height: 240px;
+      min-height: 250px;
       background-size: cover;
       background-position: center;
     }
 
-    .app-card-content {
-      padding: 30px 30px 28px;
+    .app-content {
+      padding: 32px;
     }
 
-    .app-card h3 {
+    .app-content h3 {
       margin: 0 0 12px;
       font-size: 28px;
-      color: var(--text);
     }
 
     .app-scene {
       margin-bottom: 14px;
-      color: var(--red);
-      line-height: 1.75;
+      color: var(--gold);
       font-size: 15px;
-      font-weight: 600;
+      line-height: 1.8;
+      font-weight: 700;
     }
 
-    .app-card p {
-      margin: 0 0 18px;
+    .app-content p {
+      margin: 0;
       color: var(--muted);
-      line-height: 1.9;
       font-size: 15px;
+      line-height: 1.9;
     }
 
-    .app-link {
-      font-size: 14px;
-      color: var(--red);
+    .support-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .about-grid {
+    .support-card {
+      padding: 28px 26px;
+    }
+
+    .support-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(16, 40, 77, 0.08), rgba(199, 154, 67, 0.18));
+      color: var(--navy-3);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .support-card h3 {
+      margin: 18px 0 12px;
+      font-size: 22px;
+    }
+
+    .support-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .about-layout {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 20px;
+      align-items: start;
     }
 
-    .about-card {
+    .about-main {
       padding: 34px;
     }
 
-    .about-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.95;
-      font-size: 16px;
+    .about-lead {
+      margin: 0 0 22px;
+      color: var(--navy-2);
+      font-size: 24px;
+      line-height: 1.65;
+      font-weight: 700;
     }
 
-    .about-card p + p {
+    .about-main p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.95;
+    }
+
+    .about-main p + p {
       margin-top: 18px;
     }
 
     .about-side {
+      padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(10, 24, 48, 0.98), rgba(21, 55, 99, 0.96)),
+        linear-gradient(180deg, #10284d, #153763);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .about-side h3 {
+      margin: 0 0 20px;
+      font-size: 28px;
+    }
+
+    .about-meta {
       display: grid;
       gap: 16px;
-      background: linear-gradient(180deg, var(--primary), var(--primary-2));
-      color: var(--white);
     }
 
-    .about-side strong {
+    .about-meta-item {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .about-meta-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .about-meta-item strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 16px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .about-side span {
-      color: rgba(255, 255, 255, 0.76);
-      line-height: 1.8;
-      font-size: 14px;
+    .about-meta-item span {
+      display: block;
+      color: var(--white);
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
     }
 
     .news-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .news-card {
-      display: flex;
-      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
     }
 
     .news-image {
-      aspect-ratio: 1.15 / 1;
+      aspect-ratio: 1.1 / 1;
       background-size: cover;
       background-position: center;
     }
@@ -448,61 +834,100 @@
     }
 
     .news-date {
-      color: var(--red);
+      color: var(--gold);
       font-size: 14px;
-      margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .news-title {
-      margin: 0 0 14px;
+      margin: 12px 0 14px;
       font-size: 20px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .news-body p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 34px;
-    }
-
-    .contact-card.primary {
-      background: linear-gradient(180deg, var(--primary), var(--primary-2));
-      color: var(--white);
-    }
-
-    .contact-card.primary h2 {
-      margin: 0 0 18px;
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.15;
-    }
-
-    .contact-card.primary p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.76);
       line-height: 1.85;
     }
 
-    .phone {
-      display: inline-block;
-      margin-top: 26px;
-      padding: 14px 22px;
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 20px;
+    }
+
+    .contact-panel {
+      padding: 36px;
+    }
+
+    .contact-primary {
+      background:
+        linear-gradient(180deg, rgba(8, 24, 48, 0.98), rgba(16, 40, 77, 0.98)),
+        linear-gradient(180deg, #0a1830, #10284d);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-primary h2 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 4.4vw, 58px);
+      line-height: 1.12;
+    }
+
+    .contact-primary p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .call-button,
+    .outline-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+      padding: 15px 22px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-weight: 700;
+    }
+
+    .call-button {
+      background: linear-gradient(135deg, var(--gold) 0%, #efc570 100%);
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(199, 154, 67, 0.26);
+    }
+
+    .outline-button {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+    }
+
+    .contact-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .contact-badges span {
+      display: inline-flex;
+      padding: 9px 14px;
+      border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0.03em;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
     }
 
     .contact-list {
@@ -512,79 +937,150 @@
 
     .contact-item {
       padding-bottom: 18px;
-      border-bottom: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line);
     }
 
     .contact-item:last-child {
-      border-bottom: none;
       padding-bottom: 0;
+      border-bottom: none;
     }
 
     .contact-item strong {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       color: var(--muted);
-      font-size: 14px;
-      letter-spacing: 0.08em;
+      font-size: 13px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     .contact-item span {
       display: block;
+      color: var(--text);
       font-size: 20px;
-      line-height: 1.7;
+      line-height: 1.75;
       font-weight: 700;
     }
 
-    .footer {
-      padding: 26px 0 36px;
-      color: #6b7280;
-      text-align: center;
+    .contact-note {
+      margin-top: 18px;
+      color: var(--muted);
       font-size: 14px;
+      line-height: 1.85;
     }
 
-    @media (max-width: 1080px) {
-      .product-grid,
-      .news-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .footer {
+      padding: 0 0 34px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      padding: 28px 30px;
+      gap: 24px;
+    }
+
+    .footer-panel {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .footer-brand {
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(10, 24, 48, 0.98), rgba(16, 40, 77, 0.98));
+      color: var(--white);
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand p {
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--navy-2);
+    }
+
+    .footer-column a,
+    .footer-column span {
+      display: block;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .footer-bottom {
+      padding: 20px 0 0;
+      color: #6b7789;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(10, 24, 48, 0.96), rgba(21, 55, 99, 0.96));
+      color: var(--white);
+      box-shadow: 0 16px 36px rgba(8, 24, 48, 0.22);
+      font-weight: 700;
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .floating-call:hover {
+      box-shadow: 0 20px 42px rgba(8, 24, 48, 0.28);
+    }
+
+    @media (max-width: 1120px) {
+      .hero-main,
+      .about-layout,
+      .contact-wrap {
+        grid-template-columns: 1fr;
       }
 
-      .about-grid,
-      .contact-grid {
+      .value-grid,
+      .product-grid,
+      .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-foot {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 760px) {
-      .container {
-        width: min(var(--max), calc(100% - 24px));
-      }
-
+    @media (max-width: 820px) {
+      .topbar-inner,
       .nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
       }
 
       .nav-links {
-        flex-wrap: wrap;
-        gap: 16px 22px;
-        font-size: 15px;
-      }
-
-      .hero-copy {
-        min-height: auto;
-        padding: 70px 0 26px;
-      }
-
-      .hero-copy p {
-        font-size: 16px;
-      }
-
-      .hero-points,
-      .product-grid,
-      .news-grid {
-        grid-template-columns: 1fr;
+        justify-content: flex-start;
+        gap: 14px 18px;
       }
 
       .app-card {
@@ -594,75 +1090,200 @@
       .app-media {
         min-height: 220px;
       }
+    }
 
-      .hero-point {
-        padding-right: 0;
-        padding-bottom: 16px;
-        border-right: none;
-        border-bottom: 1px solid var(--line);
+    @media (max-width: 680px) {
+      .container {
+        width: min(var(--max), calc(100% - 24px));
       }
 
-      .hero-point:last-child {
-        padding-bottom: 0;
-        border-bottom: none;
+      .hero-main {
+        padding: 34px 0 26px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(36px, 11vw, 52px);
+      }
+
+      .hero-copy p,
+      .section-desc,
+      .about-main p,
+      .contact-primary p {
+        font-size: 15px;
+      }
+
+      .hero-stats,
+      .hero-foot,
+      .value-grid,
+      .product-grid,
+      .news-grid,
+      .panel-grid {
+        grid-template-columns: 1fr;
       }
 
       .section {
-        padding: 68px 0;
+        padding: 74px 0;
       }
 
       .section-head {
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 26px;
+        margin-bottom: 28px;
+      }
+
+      .hero-panel,
+      .about-main,
+      .about-side,
+      .contact-panel,
+      .support-card,
+      .value-card,
+      .news-body,
+      .app-content,
+      .footer-brand,
+      .footer-grid {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .contact-actions,
+      .hero-actions {
+        width: 100%;
+      }
+
+      .hero-actions a,
+      .call-button,
+      .outline-button {
+        width: 100%;
+      }
+
+      .contact-item span {
+        font-size: 18px;
+      }
+
+      .floating-call {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
+  <a class="floating-call" href="tel:13922887666">电话咨询：13922887666</a>
+
   <header class="hero" id="top">
-    <div class="hero-slides">
+    <div class="hero-slides" aria-hidden="true">
       <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-1.jpg');"></div>
       <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-2.jpg');"></div>
-      <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-1.jpg');"></div>
+      <div class="hero-slide" style="background-image:url('https://images.pexels.com/photos/6636474/pexels-photo-6636474.jpeg?auto=compress&w=1600');"></div>
     </div>
+
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-list">
+          <span>成立于 2010 年</span>
+          <span>芯片供应行业经验 25 年以上</span>
+          <span>香港、深圳均设有办公室</span>
+        </div>
+        <div class="topbar-contact">
+          <span>专业储存芯片供应商</span>
+          <span>联系电话：13922887666</span>
+        </div>
+      </div>
+    </div>
+
     <div class="hero-inner">
       <div class="container">
         <nav class="nav">
           <a class="brand" href="#top" aria-label="深圳志康电子科技有限公司">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span>ZK CHIP</span>
+            <span class="brand-mark">ZK</span>
+            <span class="brand-copy">
+              <strong>ZK CHIP</strong>
+              <span>Shenzhen Zhikang Electronics</span>
+            </span>
           </a>
+
           <div class="nav-links">
             <a href="#products">产品中心</a>
             <a href="#applications">行业应用</a>
+            <a href="#support">服务支持</a>
             <a href="#about">公司简介</a>
             <a href="#news">新闻资讯</a>
-
             <a href="#contact">联系我们</a>
+            <a class="nav-phone" href="tel:13922887666">13922887666</a>
           </div>
         </nav>
 
-        <div class="hero-copy">
-          <div class="hero-copy-inner">
+        <div class="hero-main">
+          <div class="hero-copy">
             <span class="hero-kicker">Professional Memory Supplier</span>
-            <h1>志康电子为客户提供<br>多系列存储芯片产品</h1>
-            <p>深圳志康电子科技有限公司专注于 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片供应，服务消费电子、数据中心、车载电子等应用方向，为客户提供更高效的存储芯片配套支持。</p>
+            <h1>面向多行业应用场景的<br>存储芯片供应支持</h1>
+            <p>深圳志康电子科技有限公司专注于 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片的产品供应与业务配套，围绕消费电子、数据中心、车载电子等应用方向，为客户提供更清晰的选型沟通与更高效的合作支持。</p>
+
+            <div class="hero-actions">
+              <a class="primary" href="tel:13922887666">立即电话咨询</a>
+              <a class="secondary" href="#products">查看产品中心</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>Company</strong>
+                <span>深圳志康电子科技有限公司</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Product Line</strong>
+                <span>SDRAM / DDR / DDR2 / DDR3 / SPI</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Application</strong>
+                <span>消费电子、数据中心、车载电子等</span>
+              </div>
+            </div>
           </div>
+
+          <aside class="hero-panel">
+            <span class="panel-label">Business Profile</span>
+            <h2 class="panel-title">聚焦存储芯片<br>服务长期合作需求</h2>
+            <p class="panel-text">公司以专业储存芯片供应商为定位，结合 2010 年成立以来的持续积累，以及 25 年以上的行业经验，为不同项目提供更稳妥的业务沟通基础。</p>
+
+            <div class="panel-grid">
+              <div class="panel-item">
+                <strong>成立时间</strong>
+                <span>2010 年</span>
+              </div>
+              <div class="panel-item">
+                <strong>行业经验</strong>
+                <span>25 年以上</span>
+              </div>
+              <div class="panel-item">
+                <strong>办公地点</strong>
+                <span>香港、深圳</span>
+              </div>
+              <div class="panel-item">
+                <strong>合作方向</strong>
+                <span>产品沟通、应用匹配、长期配合</span>
+              </div>
+            </div>
+          </aside>
         </div>
 
-        <div class="hero-points">
-          <div class="hero-point">
-            <strong>提供专业应用解决方案</strong>
-            <span>围绕主流存储芯片产品，支持不同项目场景的方案沟通与应用适配。</span>
-          </div>
-          <div class="hero-point">
+        <div class="hero-foot">
+          <div class="hero-foot-card">
             <strong>多系列产品覆盖</strong>
-            <span>SDRAM、DDR、DDR2、DDR3、SPI 等多个系列，满足多层次业务需要。</span>
+            <span>围绕 SDRAM、DDR、DDR2、DDR3、SPI 等芯片产品，满足不同业务方向的配套需要。</span>
           </div>
-          <div class="hero-point">
-            <strong>行业应用导向</strong>
-            <span>聚焦消费电子、数据中心、车载电子等场景，帮助客户推进选型落地。</span>
+          <div class="hero-foot-card">
+            <strong>面向实际应用场景</strong>
+            <span>聚焦消费电子、数据中心、车载电子等领域，帮助客户更顺畅地推进项目交流。</span>
+          </div>
+          <div class="hero-foot-card">
+            <strong>双办公室协同</strong>
+            <span>香港与深圳办公室布局，便于开展跨区域客户沟通与项目配合。</span>
+          </div>
+          <div class="hero-foot-card">
+            <strong>更正式的合作入口</strong>
+            <span>以清晰的公司信息、产品方向和联系电话，方便客户快速建立初步联系。</span>
           </div>
         </div>
       </div>
@@ -670,35 +1291,67 @@
   </header>
 
   <main>
-    <section class="section" id="products">
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <div>
+            <span class="section-kicker">Core Value</span>
+            <h2>为什么选择志康电子</h2>
+          </div>
+          <div class="section-desc">在信息表达更完整的基础上，我们把网站呈现得更像一个正式官网首页，让客户在首次访问时就能快速理解公司定位、主要产品与合作方向。</div>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <strong>公司背景更清晰</strong>
+            <p>成立时间、行业经验和办公地点直接前置展示，提升初次访问时的信任感与识别度。</p>
+          </article>
+          <article class="value-card">
+            <strong>产品方向更集中</strong>
+            <p>围绕存储芯片产品线进行组织，避免信息分散，更贴合专业储存芯片供应商的官网表达。</p>
+          </article>
+          <article class="value-card">
+            <strong>应用场景更明确</strong>
+            <p>从消费电子到数据中心、车载电子，帮助访客快速判断业务方向是否匹配。</p>
+          </article>
+          <article class="value-card">
+            <strong>联系路径更直接</strong>
+            <p>首屏、导航、联系区和浮动按钮都保留电话入口，方便访客快速发起咨询。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Product Center</span>
             <h2>产品中心</h2>
           </div>
-          <a class="more" href="#contact">查看更多</a>
+          <a class="more" href="#contact">联系获取产品支持</a>
         </div>
 
         <div class="product-grid">
           <article class="product-card">
             <span class="product-tag">SDRAM</span>
             <h3>SDRAM</h3>
-            <p>适合成熟平台、稳定运行及多类基础型存储应用需求。</p>
+            <p>适用于成熟平台与稳定运行场景，满足多类基础型存储芯片应用需求。</p>
           </article>
           <article class="product-card">
-            <span class="product-tag">DDR</span>
+            <span class="product-tag">DDR / DDR2</span>
             <h3>DDR / DDR2</h3>
-            <p>满足通用电子设备与延续型项目的存储配置要求。</p>
+            <p>面向通用电子设备与延续型项目，便于围绕既有平台进行存储配置沟通。</p>
           </article>
           <article class="product-card">
             <span class="product-tag">DDR3</span>
             <h3>DDR3</h3>
-            <p>适配更高带宽需求，在多行业方案中具备广泛应用空间。</p>
+            <p>适配更高带宽需求，在多行业电子方案中拥有更广泛的应用空间。</p>
           </article>
           <article class="product-card">
             <span class="product-tag">SPI</span>
             <h3>SPI</h3>
-            <p>适用于嵌入式控制、启动存储与参数配置等应用方向。</p>
+            <p>适用于嵌入式控制、启动存储与参数配置等方向，满足多种控制类应用需要。</p>
           </article>
         </div>
       </div>
@@ -707,51 +1360,78 @@
     <section class="section" id="applications">
       <div class="container">
         <div class="section-head">
-            <div>
-              <h2>行业应用</h2>
-            </div>
-          <a class="more" href="#contact">查看更多</a>
+          <div>
+            <span class="section-kicker">Industry Application</span>
+            <h2>行业应用</h2>
+          </div>
+          <a class="more" href="#contact">沟通应用方向</a>
         </div>
 
         <div class="application-wrap">
           <article class="app-card">
             <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-1.jpg');"></div>
-            <div class="app-card-content">
+            <div class="app-content">
               <h3>消费电子</h3>
               <div class="app-scene">智能终端、家用设备、便携式产品</div>
-              <p>面向消费级设备运行与数据缓存需求，支持主流电子产品中的存储芯片配套应用。</p>
-              <a class="app-link" href="#contact">查看更多</a>
+              <p>围绕消费级设备的运行与数据缓存需求，提供适配主流电子产品场景的存储芯片供应支持，便于客户围绕功能、性能与项目节奏进行更高效的沟通。</p>
             </div>
           </article>
 
           <article class="app-card">
             <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-2.jpg');"></div>
-            <div class="app-card-content">
+            <div class="app-content">
               <h3>数据中心</h3>
               <div class="app-scene">服务器系统、数据处理、计算平台</div>
-              <p>针对更高吞吐与更大容量需求的系统环境，提供适配多类数据场景的存储芯片产品。</p>
-              <a class="app-link" href="#contact">查看更多</a>
+              <p>面向更高吞吐与更大容量需求的系统环境，围绕多类型存储芯片产品提供更清楚的应用匹配方向，支持不同数据场景下的业务交流。</p>
             </div>
           </article>
 
           <article class="app-card">
             <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-3.jpg');"></div>
-            <div class="app-card-content">
+            <div class="app-content">
               <h3>车载电子</h3>
               <div class="app-scene">车载控制、信息娱乐、电子模组</div>
-              <p>适用于车载系统中的数据读写与运行支持，帮助项目在复杂环境下进行产品匹配。</p>
-              <a class="app-link" href="#contact">查看更多</a>
+              <p>适用于车载系统中的数据读写与运行支持方向，帮助客户围绕不同项目环境进行产品匹配与合作沟通，提升前期交流效率。</p>
             </div>
           </article>
 
           <article class="app-card">
             <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-4.jpg');"></div>
-            <div class="app-card-content">
+            <div class="app-content">
               <h3>工业设备</h3>
               <div class="app-scene">控制终端、监控设备、边缘装置</div>
-              <p>兼顾稳定性与持续运行需求，为工业类设备提供可落地的存储芯片支持方向。</p>
-              <a class="app-link" href="#contact">查看更多</a>
+              <p>兼顾稳定性与持续运行需求，为工业类设备与控制系统提供可落地的存储芯片应用方向，拓展更多场景下的合作可能。</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="support">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Service Support</span>
+            <h2>服务支持</h2>
+          </div>
+          <div class="section-desc">在不夸大承诺的前提下，把客户最关心的合作流程表达得更正式一些，让网站既有展示作用，也有业务沟通入口的功能。</div>
+        </div>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <span class="support-step">01</span>
+            <h3>需求沟通</h3>
+            <p>围绕芯片类型、应用方向与项目场景进行初步交流，帮助客户更快明确适合的产品讨论范围。</p>
+          </article>
+          <article class="support-card">
+            <span class="support-step">02</span>
+            <h3>产品匹配</h3>
+            <p>基于 SDRAM、DDR、DDR2、DDR3、SPI 等多系列产品方向，推进更聚焦的方案沟通与业务配合。</p>
+          </article>
+          <article class="support-card">
+            <span class="support-step">03</span>
+            <h3>长期合作</h3>
+            <p>结合香港与深圳办公室协同优势，为后续项目配合、持续联系与长期合作打下更稳定的沟通基础。</p>
           </article>
         </div>
       </div>
@@ -760,95 +1440,100 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section-head">
-            <div>
-              <h2>公司简介</h2>
-              <div class="desc">深圳志康电子科技有限公司成立于 2010 年，深耕芯片供应行业 25 年以上，在深圳与香港均设有办公室，持续为客户提供多系列存储芯片产品支持。</div>
-            </div>
+          <div>
+            <span class="section-kicker">About Company</span>
+            <h2>公司简介</h2>
+          </div>
         </div>
 
-        <div class="about-grid">
-          <article class="about-card">
-            <p>深圳志康电子科技有限公司成立于 2010 年，是一家专注于存储芯片领域的专业供应商。公司依托 25 年以上的行业经验，围绕 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片，持续为客户提供稳定、高效的产品供应与配套服务。</p>
-            <p>公司产品广泛面向消费电子、数据中心、车载电子等应用方向，并在香港、深圳均设有办公室，便于更高效地开展客户沟通、项目配合与供货支持，帮助客户在选型、导入与长期合作中获得更可靠的响应。</p>
+        <div class="about-layout">
+          <article class="about-main">
+            <p class="about-lead">深圳志康电子科技有限公司成立于 2010 年，是一家专注于存储芯片领域的专业供应商，深耕芯片供应行业 25 年以上，在香港与深圳均设有办公室。</p>
+            <p>公司围绕 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片开展业务，持续服务消费电子、数据中心、车载电子等应用方向。我们希望通过更清晰的公司展示、更正式的页面表达，以及更直接的联系入口，让客户在访问网站时就能快速理解公司的主营方向与合作价值。</p>
+            <p>在实际合作中，志康电子更重视产品沟通效率、应用匹配思路与长期配合关系。网站此次优化后，整体视觉、信息层级与联系电话入口都更接近正式官网的表达方式，更适合用于对外展示与客户分享。</p>
           </article>
 
-          <article class="about-card about-side">
-            <div>
-              <strong>公司名称</strong>
-              <span>深圳志康电子科技有限公司</span>
+          <aside class="about-side">
+            <h3>企业信息</h3>
+            <div class="about-meta">
+              <div class="about-meta-item">
+                <strong>公司名称</strong>
+                <span>深圳志康电子科技有限公司</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>成立时间</strong>
+                <span>2010 年</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>行业经验</strong>
+                <span>25 年以上</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>办公地点</strong>
+                <span>香港、深圳</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>公司定位</strong>
+                <span>专业储存芯片供应商</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>芯片产品</strong>
+                <span>SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片</span>
+              </div>
+              <div class="about-meta-item">
+                <strong>应用领域</strong>
+                <span>消费电子、数据中心、车载电子等</span>
+              </div>
             </div>
-            <div>
-              <strong>成立时间</strong>
-              <span>2010 年</span>
-            </div>
-            <div>
-              <strong>行业经验</strong>
-              <span>25 年以上</span>
-            </div>
-            <div>
-              <strong>办公地点</strong>
-              <span>香港、深圳</span>
-            </div>
-            <div>
-              <strong>公司定位</strong>
-              <span>专业储存芯片供应商</span>
-            </div>
-            <div>
-              <strong>芯片产品</strong>
-              <span>SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片</span>
-            </div>
-            <div>
-              <strong>应用领域</strong>
-              <span>消费电子、数据中心、车载电子等</span>
-            </div>
-          </article>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="section" id="news">
+    <section class="section section-alt" id="news">
       <div class="container">
         <div class="section-head">
-            <div>
-              <h2>新闻资讯</h2>
-            </div>
-          <a class="more" href="#contact">查看更多</a>
+          <div>
+            <span class="section-kicker">News</span>
+            <h2>新闻资讯</h2>
+          </div>
+          <a class="more" href="#contact">咨询合作信息</a>
         </div>
 
         <div class="news-grid">
           <article class="news-card">
             <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-1.jpg');"></div>
             <div class="news-body">
-              <div class="news-date">2026-07-06</div>
+              <div class="news-date">2026-07-08</div>
               <h3 class="news-title">存储芯片在消费电子领域的应用持续深化</h3>
-              <p>随着终端设备性能提升，市场对更稳定、更高效的存储芯片方案提出了更明确的配套需求。</p>
+              <p>随着终端设备性能不断提升，市场对于更稳定、更高效的存储芯片方案提出了更加明确的配套需求。</p>
             </div>
           </article>
 
           <article class="news-card">
             <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-2.jpg');"></div>
             <div class="news-body">
-              <div class="news-date">2026-07-06</div>
+              <div class="news-date">2026-07-08</div>
               <h3 class="news-title">数据中心场景对多类型存储产品的适配要求提升</h3>
-              <p>从服务器平台到数据处理系统，不同计算场景正在推动存储器件的多层次配置需求增长。</p>
+              <p>从服务器平台到数据处理系统，不同计算场景正在推动存储器件的多层次配置需求持续增长。</p>
             </div>
           </article>
 
           <article class="news-card">
             <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-3.jpg');"></div>
             <div class="news-body">
-              <div class="news-date">2026-07-06</div>
+              <div class="news-date">2026-07-08</div>
               <h3 class="news-title">车载电子项目对存储稳定性与供应效率更加关注</h3>
-              <p>在车载控制与智能座舱等方向中，兼顾稳定运行和项目节奏的存储方案成为重要环节。</p>
+              <p>在车载控制与智能座舱等方向中，兼顾稳定运行和项目节奏的存储方案成为越来越重要的环节。</p>
             </div>
           </article>
 
           <article class="news-card">
             <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-4.jpg');"></div>
             <div class="news-body">
-              <div class="news-date">2026-07-06</div>
+              <div class="news-date">2026-07-08</div>
               <h3 class="news-title">多系列芯片供应正在支持更多工业与嵌入式应用</h3>
-              <p>SDRAM、DDR、DDR2、DDR3、SPI 等芯片产品在不同工业设备与控制系统中保持较高适配价值。</p>
+              <p>SDRAM、DDR、DDR2、DDR3、SPI 等芯片产品在不同工业设备与控制系统中保持较高的适配价值。</p>
             </div>
           </article>
         </div>
@@ -857,21 +1542,30 @@
 
     <section class="section" id="contact">
       <div class="container">
-        <div class="contact-grid">
-          <article class="contact-card primary">
+        <div class="contact-wrap">
+          <article class="contact-panel contact-primary">
+            <span class="section-kicker" style="color: var(--gold-soft);">Contact Us</span>
             <h2>联系我们<br>获取芯片产品支持</h2>
-            <p>如果你正在寻找专业储存芯片供应商，或希望围绕具体产品与应用场景进行沟通，欢迎直接联系深圳志康电子科技有限公司。</p>
-            <div class="phone">13922887666</div>
+            <p>如果你正在寻找专业储存芯片供应商，或希望围绕具体产品与应用方向进一步沟通，欢迎直接联系深圳志康电子科技有限公司。现在的页面已经更适合作为对外官网名片分享给客户使用。</p>
+            <div class="contact-actions">
+              <a class="call-button" href="tel:13922887666">立即致电</a>
+              <a class="outline-button" href="#about">查看公司信息</a>
+            </div>
+            <div class="contact-badges">
+              <span>专业储存芯片供应商</span>
+              <span>香港 / 深圳办公室</span>
+              <span>多系列芯片支持</span>
+            </div>
           </article>
 
-          <article class="contact-card">
+          <article class="contact-panel">
             <div class="contact-list">
               <div class="contact-item">
                 <strong>公司名称</strong>
                 <span>深圳志康电子科技有限公司</span>
               </div>
               <div class="contact-item">
-                <strong>主要做什么</strong>
+                <strong>主营方向</strong>
                 <span>专业储存芯片供应商</span>
               </div>
               <div class="contact-item">
@@ -883,10 +1577,15 @@
                 <span>消费电子、数据中心、车载电子等</span>
               </div>
               <div class="contact-item">
+                <strong>已知芯片参数</strong>
+                <span>SDRAM、DDR、DDR2、DDR3、SPI</span>
+              </div>
+              <div class="contact-item">
                 <strong>联系方式</strong>
                 <span>13922887666</span>
               </div>
             </div>
+            <p class="contact-note">建议你把这个链接直接分享给客户或合作方。网站已经具备公司定位、产品方向、行业应用、新闻资讯和联系方式等正式官网首页常用模块。</p>
           </article>
         </div>
       </div>
@@ -894,7 +1593,35 @@
   </main>
 
   <footer class="footer">
-    深圳志康电子科技有限公司 | 专业储存芯片供应商
+    <div class="container footer-panel">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>ZK CHIP</strong>
+          <p>深圳志康电子科技有限公司致力于以更清晰、更正式的官网形象，对外展示专业储存芯片供应商的企业定位与业务方向。</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>快速导航</h3>
+          <a href="#products">产品中心</a>
+          <a href="#applications">行业应用</a>
+          <a href="#support">服务支持</a>
+          <a href="#about">公司简介</a>
+          <a href="#news">新闻资讯</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>联系信息</h3>
+          <span>深圳志康电子科技有限公司</span>
+          <span>联系电话：13922887666</span>
+          <span>办公地点：香港、深圳</span>
+          <span>主营产品：SDRAM / DDR / DDR2 / DDR3 / SPI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © 2026 深圳志康电子科技有限公司 版权所有 | 专业储存芯片供应商
+    </div>
   </footer>
 </body>
 </html>
