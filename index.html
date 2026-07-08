@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深圳志康电子科技有限公司</title>
+  <meta name="description" content="深圳志康电子科技有限公司，专业储存芯片供应商，主营 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片，应用于消费电子、数据中心、车载电子等场景。">
+  <meta name="keywords" content="深圳志康电子科技有限公司,存储芯片,SDRAM,DDR,DDR2,DDR3,SPI,芯片供应商">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="深圳志康电子科技有限公司">
+  <meta property="og:description" content="专业储存芯片供应商，主营 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片。">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --primary: #0c1730;
+      --primary-2: #17345f;
+      --white: #ffffff;
+      --text: #111827;
+      --muted: #667085;
+      --line: rgba(255, 255, 255, 0.18);
+      --line-soft: rgba(17, 24, 39, 0.08);
+      --bg: #ffffff;
+      --bg-soft: #f6f8fc;
+      --red: #b92d2d;
+      --shadow: 0 22px 56px rgba(8, 19, 44, 0.12);
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: #060d18;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero-slides {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: heroFade 15s infinite;
+      transform: scale(1.06);
+    }
+
+    .hero-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(3, 10, 20, 0.18), rgba(3, 10, 20, 0.68)),
+        linear-gradient(90deg, rgba(3, 8, 18, 0.74) 0%, rgba(3, 8, 18, 0.3) 46%, rgba(3, 8, 18, 0.62) 100%);
+    }
+
+    .hero-slide:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .hero-slide:nth-child(2) {
+      animation-delay: 5s;
+    }
+
+    .hero-slide:nth-child(3) {
+      animation-delay: 10s;
+    }
+
+    @keyframes heroFade {
+      0%, 28% {
+        opacity: 1;
+      }
+      33%, 100% {
+        opacity: 0;
+      }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--white);
+      border-radius: 8px 18px 8px 18px;
+      transform: rotate(45deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+      font-size: 17px;
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.88);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hero-copy {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 210px);
+      padding: 80px 0 40px;
+    }
+
+    .hero-copy-inner {
+      max-width: 620px;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      font-size: clamp(44px, 6vw, 72px);
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .hero-copy p {
+      margin: 22px 0 0;
+      max-width: 540px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: auto;
+      padding: 24px 0 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-point {
+      padding-right: 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .hero-point:last-child {
+      border-right: none;
+    }
+
+    .hero-point strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .hero-point span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section:nth-child(even) {
+      background: var(--bg-soft);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+    }
+
+    .section-head .desc {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .more {
+      color: var(--red);
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product-card,
+    .app-card,
+    .news-card,
+    .about-card,
+    .contact-card {
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .product-card {
+      position: relative;
+      min-height: 300px;
+      padding: 26px;
+      color: var(--white);
+      background:
+        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        url("https://images.pexels.com/photos/6636474/pexels-photo-6636474.jpeg?auto=compress&w=1200") center/cover no-repeat;
+    }
+
+    .product-card:nth-child(2) {
+      background:
+        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        url("https://images.pexels.com/photos/38361204/pexels-photo-38361204/free-photo-of-close-up-of-sk-hynix-dram-chips-on-circuit-board.jpeg?auto=compress&w=1200") center/cover no-repeat;
+    }
+
+    .product-card:nth-child(3) {
+      background:
+        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        url("https://images.pexels.com/photos/38361776/pexels-photo-38361776/free-photo-of-close-up-of-computer-ram-and-circuit-board-components.jpeg?auto=compress&w=1200") center/cover no-repeat;
+    }
+
+    .product-card:nth-child(4) {
+      background:
+        linear-gradient(180deg, rgba(4, 12, 24, 0.2), rgba(4, 12, 24, 0.86)),
+        url("https://images.pexels.com/photos/37368175/pexels-photo-37368175/free-photo-of-close-up-of-computer-motherboard-components.jpeg?auto=compress&w=1200") center/cover no-repeat;
+    }
+
+    .product-tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .product-card h3 {
+      margin: 136px 0 10px;
+      font-size: 26px;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .application-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .app-card {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      min-height: 240px;
+      color: var(--text);
+    }
+
+    .app-media {
+      min-height: 240px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .app-card-content {
+      padding: 30px 30px 28px;
+    }
+
+    .app-card h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: var(--text);
+    }
+
+    .app-scene {
+      margin-bottom: 14px;
+      color: var(--red);
+      line-height: 1.75;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .app-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    .app-link {
+      font-size: 14px;
+      color: var(--red);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+    }
+
+    .about-card {
+      padding: 34px;
+    }
+
+    .about-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.95;
+      font-size: 16px;
+    }
+
+    .about-card p + p {
+      margin-top: 18px;
+    }
+
+    .about-side {
+      display: grid;
+      gap: 16px;
+      background: linear-gradient(180deg, var(--primary), var(--primary-2));
+      color: var(--white);
+    }
+
+    .about-side strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .about-side span {
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-image {
+      aspect-ratio: 1.15 / 1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .news-body {
+      padding: 24px;
+    }
+
+    .news-date {
+      color: var(--red);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .news-title {
+      margin: 0 0 14px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .news-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 34px;
+    }
+
+    .contact-card.primary {
+      background: linear-gradient(180deg, var(--primary), var(--primary-2));
+      color: var(--white);
+    }
+
+    .contact-card.primary h2 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.15;
+    }
+
+    .contact-card.primary p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.85;
+    }
+
+    .phone {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-item {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-item span {
+      display: block;
+      font-size: 20px;
+      line-height: 1.7;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 26px 0 36px;
+      color: #6b7280;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1080px) {
+      .product-grid,
+      .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(var(--max), calc(100% - 24px));
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 16px 22px;
+        font-size: 15px;
+      }
+
+      .hero-copy {
+        min-height: auto;
+        padding: 70px 0 26px;
+      }
+
+      .hero-copy p {
+        font-size: 16px;
+      }
+
+      .hero-points,
+      .product-grid,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .app-card {
+        grid-template-columns: 1fr;
+      }
+
+      .app-media {
+        min-height: 220px;
+      }
+
+      .hero-point {
+        padding-right: 0;
+        padding-bottom: 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-point:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-slides">
+      <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-1.jpg');"></div>
+      <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-2.jpg');"></div>
+      <div class="hero-slide" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/hero-1.jpg');"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="#top" aria-label="深圳志康电子科技有限公司">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>ZK CHIP</span>
+          </a>
+          <div class="nav-links">
+            <a href="#products">产品中心</a>
+            <a href="#applications">行业应用</a>
+            <a href="#about">公司简介</a>
+            <a href="#news">新闻资讯</a>
+
+            <a href="#contact">联系我们</a>
+          </div>
+        </nav>
+
+        <div class="hero-copy">
+          <div class="hero-copy-inner">
+            <span class="hero-kicker">Professional Memory Supplier</span>
+            <h1>志康电子为客户提供<br>多系列存储芯片产品</h1>
+            <p>深圳志康电子科技有限公司专注于 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片供应，服务消费电子、数据中心、车载电子等应用方向，为客户提供更高效的存储芯片配套支持。</p>
+          </div>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <strong>提供专业应用解决方案</strong>
+            <span>围绕主流存储芯片产品，支持不同项目场景的方案沟通与应用适配。</span>
+          </div>
+          <div class="hero-point">
+            <strong>多系列产品覆盖</strong>
+            <span>SDRAM、DDR、DDR2、DDR3、SPI 等多个系列，满足多层次业务需要。</span>
+          </div>
+          <div class="hero-point">
+            <strong>行业应用导向</strong>
+            <span>聚焦消费电子、数据中心、车载电子等场景，帮助客户推进选型落地。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>产品中心</h2>
+          </div>
+          <a class="more" href="#contact">查看更多</a>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <span class="product-tag">SDRAM</span>
+            <h3>SDRAM</h3>
+            <p>适合成熟平台、稳定运行及多类基础型存储应用需求。</p>
+          </article>
+          <article class="product-card">
+            <span class="product-tag">DDR</span>
+            <h3>DDR / DDR2</h3>
+            <p>满足通用电子设备与延续型项目的存储配置要求。</p>
+          </article>
+          <article class="product-card">
+            <span class="product-tag">DDR3</span>
+            <h3>DDR3</h3>
+            <p>适配更高带宽需求，在多行业方案中具备广泛应用空间。</p>
+          </article>
+          <article class="product-card">
+            <span class="product-tag">SPI</span>
+            <h3>SPI</h3>
+            <p>适用于嵌入式控制、启动存储与参数配置等应用方向。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container">
+        <div class="section-head">
+            <div>
+              <h2>行业应用</h2>
+            </div>
+          <a class="more" href="#contact">查看更多</a>
+        </div>
+
+        <div class="application-wrap">
+          <article class="app-card">
+            <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-1.jpg');"></div>
+            <div class="app-card-content">
+              <h3>消费电子</h3>
+              <div class="app-scene">智能终端、家用设备、便携式产品</div>
+              <p>面向消费级设备运行与数据缓存需求，支持主流电子产品中的存储芯片配套应用。</p>
+              <a class="app-link" href="#contact">查看更多</a>
+            </div>
+          </article>
+
+          <article class="app-card">
+            <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-2.jpg');"></div>
+            <div class="app-card-content">
+              <h3>数据中心</h3>
+              <div class="app-scene">服务器系统、数据处理、计算平台</div>
+              <p>针对更高吞吐与更大容量需求的系统环境，提供适配多类数据场景的存储芯片产品。</p>
+              <a class="app-link" href="#contact">查看更多</a>
+            </div>
+          </article>
+
+          <article class="app-card">
+            <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-3.jpg');"></div>
+            <div class="app-card-content">
+              <h3>车载电子</h3>
+              <div class="app-scene">车载控制、信息娱乐、电子模组</div>
+              <p>适用于车载系统中的数据读写与运行支持，帮助项目在复杂环境下进行产品匹配。</p>
+              <a class="app-link" href="#contact">查看更多</a>
+            </div>
+          </article>
+
+          <article class="app-card">
+            <div class="app-media" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/app-4.jpg');"></div>
+            <div class="app-card-content">
+              <h3>工业设备</h3>
+              <div class="app-scene">控制终端、监控设备、边缘装置</div>
+              <p>兼顾稳定性与持续运行需求，为工业类设备提供可落地的存储芯片支持方向。</p>
+              <a class="app-link" href="#contact">查看更多</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+            <div>
+              <h2>公司简介</h2>
+              <div class="desc">深圳志康电子科技有限公司成立于 2010 年，深耕芯片供应行业 25 年以上，在深圳与香港均设有办公室，持续为客户提供多系列存储芯片产品支持。</div>
+            </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <p>深圳志康电子科技有限公司成立于 2010 年，是一家专注于存储芯片领域的专业供应商。公司依托 25 年以上的行业经验，围绕 SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片，持续为客户提供稳定、高效的产品供应与配套服务。</p>
+            <p>公司产品广泛面向消费电子、数据中心、车载电子等应用方向，并在香港、深圳均设有办公室，便于更高效地开展客户沟通、项目配合与供货支持，帮助客户在选型、导入与长期合作中获得更可靠的响应。</p>
+          </article>
+
+          <article class="about-card about-side">
+            <div>
+              <strong>公司名称</strong>
+              <span>深圳志康电子科技有限公司</span>
+            </div>
+            <div>
+              <strong>成立时间</strong>
+              <span>2010 年</span>
+            </div>
+            <div>
+              <strong>行业经验</strong>
+              <span>25 年以上</span>
+            </div>
+            <div>
+              <strong>办公地点</strong>
+              <span>香港、深圳</span>
+            </div>
+            <div>
+              <strong>公司定位</strong>
+              <span>专业储存芯片供应商</span>
+            </div>
+            <div>
+              <strong>芯片产品</strong>
+              <span>SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片</span>
+            </div>
+            <div>
+              <strong>应用领域</strong>
+              <span>消费电子、数据中心、车载电子等</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-head">
+            <div>
+              <h2>新闻资讯</h2>
+            </div>
+          <a class="more" href="#contact">查看更多</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-1.jpg');"></div>
+            <div class="news-body">
+              <div class="news-date">2026-07-06</div>
+              <h3 class="news-title">存储芯片在消费电子领域的应用持续深化</h3>
+              <p>随着终端设备性能提升，市场对更稳定、更高效的存储芯片方案提出了更明确的配套需求。</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-2.jpg');"></div>
+            <div class="news-body">
+              <div class="news-date">2026-07-06</div>
+              <h3 class="news-title">数据中心场景对多类型存储产品的适配要求提升</h3>
+              <p>从服务器平台到数据处理系统，不同计算场景正在推动存储器件的多层次配置需求增长。</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-3.jpg');"></div>
+            <div class="news-body">
+              <div class="news-date">2026-07-06</div>
+              <h3 class="news-title">车载电子项目对存储稳定性与供应效率更加关注</h3>
+              <p>在车载控制与智能座舱等方向中，兼顾稳定运行和项目节奏的存储方案成为重要环节。</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('https://jenny-dot123.github.io/.github.io/assets/news-4.jpg');"></div>
+            <div class="news-body">
+              <div class="news-date">2026-07-06</div>
+              <h3 class="news-title">多系列芯片供应正在支持更多工业与嵌入式应用</h3>
+              <p>SDRAM、DDR、DDR2、DDR3、SPI 等芯片产品在不同工业设备与控制系统中保持较高适配价值。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <article class="contact-card primary">
+            <h2>联系我们<br>获取芯片产品支持</h2>
+            <p>如果你正在寻找专业储存芯片供应商，或希望围绕具体产品与应用场景进行沟通，欢迎直接联系深圳志康电子科技有限公司。</p>
+            <div class="phone">13922887666</div>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>公司名称</strong>
+                <span>深圳志康电子科技有限公司</span>
+              </div>
+              <div class="contact-item">
+                <strong>主要做什么</strong>
+                <span>专业储存芯片供应商</span>
+              </div>
+              <div class="contact-item">
+                <strong>芯片产品名称</strong>
+                <span>SDRAM、DDR、DDR2、DDR3、SPI 等各种芯片</span>
+              </div>
+              <div class="contact-item">
+                <strong>芯片主要用途</strong>
+                <span>消费电子、数据中心、车载电子等</span>
+              </div>
+              <div class="contact-item">
+                <strong>联系方式</strong>
+                <span>13922887666</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    深圳志康电子科技有限公司 | 专业储存芯片供应商
+  </footer>
+</body>
+</html>
